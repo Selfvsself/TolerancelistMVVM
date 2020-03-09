@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Список допусков</string>
+
+<!--    UI-->
+    <string name="theSize">Размер</string>
+    <string name="tolerance">Допуск</string>
+    <string name="test">test</string>
+</resources>
