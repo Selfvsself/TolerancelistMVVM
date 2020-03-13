@@ -7,15 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.selfvsself.tolerancelistmvvm.R;
-import com.selfvsself.tolerancelistmvvm.constant.Tolerance;
-import com.selfvsself.tolerancelistmvvm.model.ListItem;
 import com.selfvsself.tolerancelistmvvm.model.RecyclerAdapter;
+import com.selfvsself.tolerancelistmvvm.model.Repository;
+import com.selfvsself.tolerancelistmvvm.model.SizeWithTolerance;
 import com.selfvsself.tolerancelistmvvm.viewModel.MainActivityModel;
 
 import java.util.ArrayList;
@@ -28,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText sizeInput, toleranceInput;
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
-    private List<ListItem> listItems = new ArrayList<>();
-
+    private List<SizeWithTolerance> listItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

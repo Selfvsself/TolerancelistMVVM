@@ -6,9 +6,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.selfvsself.tolerancelistmvvm.constant.Tolerance;
-import com.selfvsself.tolerancelistmvvm.model.ListItem;
 import com.selfvsself.tolerancelistmvvm.model.Repository;
+import com.selfvsself.tolerancelistmvvm.model.SizeWithTolerance;
 
 import java.util.List;
 
@@ -17,16 +16,19 @@ public class MainActivityModel extends ViewModel {
     private Repository repository;
     private double size;
     private String tolerance;
-    private MutableLiveData<List<ListItem>> listData = new MutableLiveData<>();
+    private MutableLiveData<List<SizeWithTolerance>> listData = new MutableLiveData<>();
 
     public MainActivityModel() {
-        repository = new Repository();
-        listData.setValue(repository.getAll(1, ""));
-        size = 1;
+        size = 14;
         tolerance = "";
+        this.repository = new Repository();
+        listData.setValue(this.repository.getAll(size, ""));
     }
 
-    public LiveData<List<ListItem>> getListData() {
+    public void setRepository(Repository repository) {
+    }
+
+    public LiveData<List<SizeWithTolerance>> getListData() {
         return listData;
     }
 

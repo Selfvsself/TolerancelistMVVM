@@ -14,9 +14,9 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
-    List<ListItem> itemList;
+    List<SizeWithTolerance> itemList;
 
-    public RecyclerAdapter(List<ListItem> itemList) {
+    public RecyclerAdapter(List<SizeWithTolerance> itemList) {
         this.itemList = itemList;
     }
 
@@ -29,7 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        ListItem item = itemList.get(position);
+        SizeWithTolerance item = itemList.get(position);
         holder.sizeText.setText(String.valueOf(item.getSize()));
         holder.tolText.setText(item.getTolerance().toString());
         holder.upTolText.setText(String.valueOf(item.getUpperTolerance()));

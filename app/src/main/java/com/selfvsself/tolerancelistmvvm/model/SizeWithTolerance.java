@@ -1,15 +1,14 @@
 package com.selfvsself.tolerancelistmvvm.model;
 
-import com.selfvsself.tolerancelistmvvm.constant.Tolerance;
-
-public class ListItem {
+public class SizeWithTolerance {
 
     private double size;
-    private Tolerance tolerance;
+    private String tolerance;
     private double upperTolerance;
     private double lowerTolerance;
+    private String standardName;
 
-    public ListItem(double size, Tolerance tolerance, double upperTolerance, double lowerTolerance) {
+    public SizeWithTolerance(double size, String tolerance, double upperTolerance, double lowerTolerance) {
         this.size = size;
         this.tolerance = tolerance;
         this.upperTolerance = upperTolerance;
@@ -20,7 +19,7 @@ public class ListItem {
         return size;
     }
 
-    public Tolerance getTolerance() {
+    public String getTolerance() {
         return tolerance;
     }
 
@@ -30,5 +29,13 @@ public class ListItem {
 
     public double getLowerTolerance() {
         return lowerTolerance;
+    }
+
+    public String getStandardName() {
+        return standardName;
+    }
+
+    public void setStandardName(String standardName) {
+        this.standardName = standardName;
     }
 }
